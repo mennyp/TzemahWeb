@@ -1,0 +1,192 @@
+﻿
+@Html.Partial("_Loading")
+
+
+<div id="queryWindow" class="attachmentSection" style="display: none;">
+
+    <div id="queriesContainer">
+        <div id="labDataQueries">
+            <div id="labQuery1" class=""></div>
+
+            <div id="labQuery2" class=""></div>
+            <div id="labQuery3" class=""></div>
+        </div>
+        <div id="fieldDataQueries">
+            <div id="fieldQuery1" class=""></div>
+            <div id="fieldQuery2" class=""></div>
+            <div id="fieldQuery3" class=""></div>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div id="attachWindow" class="attachmentSection">
+        <div id="listView"></div>
+    </div>
+    <div id="rangesWindow" class="attachmentSection">
+        <img src="../../images/legend.jpg"/>
+    </div>
+    <div id="reportGeneratorWindow" class="attachmentSection">
+        <div id="reportPartsPicker"></div>
+
+        <div id="mapPreviewImageContainer">
+            <div id="hider" style="display: none;">
+                <div class="loader">
+
+                </div>
+            </div>
+            <img id="generatedMapImage" src="~/images/placeholder.jpg" class="img-responsive">
+        </div>
+    </div>
+
+
+    <div id="vertical">
+        <div id="top-pane">
+            <div id="horizontal">
+                <div id="legend">
+
+                </div>
+                <div id="mapContainer">
+                    <div id="map" style="width:100%;height:100%">
+                        <div id="HomeButton"></div>
+                        <div id="AttachmentsButton" class="AttachButton">
+                            <div class="attachContainer">
+                                <div title="open attachments"
+                                     role="button"
+                                     class="innerButton">
+                                    <span>open attachments</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ExportMapToFile" class="AttachButton">
+                            <div class="attachContainer">
+                                <div title="export to word"
+                                     role="button"
+                                     class="innerButton">
+                                    <span>export to word file</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="SelectPitsTool" class="AttachButton">
+                            <div class="attachContainer">
+                                <div title="בחר בורות למידע"
+                                     role="button"
+                                     class="innerButton">
+                                    <span>בחר בורות למידע</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mapSelectPlotsTool" class="AttachButton">
+                            <div class="attachContainer">
+                                <div title="בחר חלקות"
+                                     role="button"
+                                     class="innerButton">
+                                    <span>בחר חלקות</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="mapSelectPitsTool" class="AttachButton">
+                            <div class="attachContainer">
+                                <div title="בחר בורות"
+                                     role="button"
+                                     class="innerButton">
+                                    <span>בחר בורות</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="legendTool" class="AttachButton">
+                            <div class="attachContainer">
+                                <div title="הצג מקרא"
+                                     role="button"
+                                     class="innerButton">
+                                    <span>הצג מקרא</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="printButton"></div>
+                        <span id="coordinatesInfo" style="position:absolute; left:15px; bottom:10px; color:#000; z-index:50;"></span>
+                    </div>
+                </div>
+                <div id="rightFrame" class="">
+                    <select id="meshakim"
+                            style="width: 100%;"
+                            multiple="multiple"
+                            data-placeholder="בחר משקים..."></select>
+                        <div class="k-rtl">
+                            <div id="plots"  style="display: none"></div>
+
+                        </div>
+                        <div class="k-rtl">
+                            <div id="pits" style="display: none"></div>
+                        </div>
+                        <div class="k-rtl">
+                            <div id="surveys"></div>
+
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom-pane">
+            <div id="horizontalData">
+                <div id="labDataOperations" style="overflow: hidden">
+                    <div class="k-rtl">
+                        <div id="labData"></div>
+
+                    </div>
+
+                </div>
+                <div id="fieldDataOperations" style="overflow: hidden">
+                    <div class="k-rtl">
+                        <div id="fieldData"></div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="queryOptions">
+                <div id="depthSelector" class="btn-group pull-right" data-toggle="buttons-radio">
+                    <button type="button" depth="" class="btn k-button btn-default depthButton">כולם</button>
+                    <button type="button" depth="1" class="btn k-button btn-default depthButton">1</button>
+                    <button type="button" depth="2" class="btn k-button btn-default depthButton">2</button>
+                    <button type="button" depth="1,2" class="btn k-button btn-default depthButton">1&2</button>
+                </div>
+                <input id="labDataSymbology" />
+                <input id="fieldDataSymbology" />
+                <button id="clearSymbology" type="button"
+                        class="btn k-button btn-default ">נקה</button>
+                <button id="queriesOpenButton" type="button"
+                        class="btn k-button btn-default depthButton pull-right" style="display: none">
+                    <span class="glyphicon glyphicon-grain" aria-hidden="true"></span> שאילתות
+                </button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+
+        $("#horizontalData").kendoSplitter({
+            panes: [
+                { collapsible: true, size: "50%" },
+                { collapsible: true, size: "50%" }
+            ]
+        });
+
+
+
+    });
+</script>
+
+<style>
+</style>
+
+
+

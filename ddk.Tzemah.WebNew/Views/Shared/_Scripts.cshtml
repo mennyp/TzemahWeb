@@ -1,0 +1,32 @@
+﻿
+<script src="~/Content/jquery/js/jquery.min.js"></script>
+<script src="~/Content/jquery-ui/jquery-ui.js"></script>
+<script src="~/Content/kendo/kendo/js/kendo.all.min.js"></script>
+<script src="~/Content/kendo/kendo/js/kendo.culture.he-IL.min.js"></script>
+<script src="~/Content/kendo/kendo/js/kendo.messages.he-IL.min.js"></script>
+<script src="~/Content/underscore/underscore.js"></script>
+<script src="~/Content/momentjs/moment.js"></script>
+<script>
+    //debugger;
+    var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+    var dojoConfig = {
+        locale: "he",
+        parseOnLoad: true,
+        packages: [],
+        paths: {
+            ddk: location.href + "scripts/widgets"
+        }
+    }
+
+</script>
+
+<script type="text/javascript">
+    //set current to the "en-GB" culture script
+    kendo.culture("he-IL");
+</script>
+
+<script src="http://js.arcgis.com/3.14/"></script>
+<script src="~/Scripts/Tzemah/LayerDefProvider.js"></script>
+<script src="~/Scripts/Tzemah/mapControls.js"></script>
+<script src="~/Scripts/Tzemah/commonScripts.js"></script>
+<script src="~/Scripts/Tzemah/viewScripts.js"></script>

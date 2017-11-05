@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoview.Tzemah.Common", "Geoview.Tzemah.Common\Geoview.Tzemah.Common.csproj", "{B2948E59-8143-4462-B8A0-6694496F216E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geoview.SoilManagement.ReportGenerator", "Geoview.SoilManagement.ReportGenerator\Geoview.SoilManagement.ReportGenerator.csproj", "{DE6189B0-47C6-4C7B-A047-3C2A0DEA0F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ddk.Tzemah.WebNew", "ddk.Tzemah.WebNew\ddk.Tzemah.WebNew.csproj", "{548DA26E-FB3C-47BF-B990-14F06B9A8E26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ddk.Tzemah.WebNewTests", "ddk.Tzemah.WebNewTests\ddk.Tzemah.WebNewTests.csproj", "{5E7B2482-52DE-4B00-949A-481966EF3987}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2948E59-8143-4462-B8A0-6694496F216E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{B2948E59-8143-4462-B8A0-6694496F216E}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{B2948E59-8143-4462-B8A0-6694496F216E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2948E59-8143-4462-B8A0-6694496F216E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE6189B0-47C6-4C7B-A047-3C2A0DEA0F8D}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6189B0-47C6-4C7B-A047-3C2A0DEA0F8D}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{DE6189B0-47C6-4C7B-A047-3C2A0DEA0F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE6189B0-47C6-4C7B-A047-3C2A0DEA0F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{548DA26E-FB3C-47BF-B990-14F06B9A8E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{548DA26E-FB3C-47BF-B990-14F06B9A8E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{548DA26E-FB3C-47BF-B990-14F06B9A8E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{548DA26E-FB3C-47BF-B990-14F06B9A8E26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E7B2482-52DE-4B00-949A-481966EF3987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E7B2482-52DE-4B00-949A-481966EF3987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E7B2482-52DE-4B00-949A-481966EF3987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E7B2482-52DE-4B00-949A-481966EF3987}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "עריכה";
+    Layout = "../Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/Tzemah/editScripts.js"></script>
+@Html.Partial("_Loading")
+@Html.Partial("_templates")
+
+<div id="hider" style="display: none; z-index: 100000">
+    <div class="loader">
+
+    </div>
+</div>
+
+
+<div id="main">
+    <div id="mapWindow">
+        <div id="map"></div>
+    </div>
+    <div id="labImportWindow">
+        <div id="labImportGrid"></div>
+        <div id="importWindow">
+            <div>
+                <div class=" k-header">
+                    <input type="file" id="fileInput" class="k-filename">
+                    <input type="number" id="surveyIdToImport" />
+                </div>
+
+                <button id="sendToParsing" type="button" depth="" class="btn k-button btn-default depthButton">טען</button>
+            </div>
+            <pre id="fileDisplayArea" class="k-rtl"></pre>
+        </div>
+
+    </div>
+    <div id="addAttachmentWindow">
+        <div class="demo-section k-header">
+            <a id="attachAdd" class="k-button k-button-icontext k-add-button" href="#"><span class="k-icon k-add"></span>Add new record</a>
+        </div>
+        <div id="attachListView">
+
+
+        </div>
+    </div>
+    <div id="attachSelectionWindow">
+        <div class=" k-header">
+            <input type="file" id="attachFileInput" class="k-filename">
+            <input type="number" id="surveyIdForAttach" />
+        </div>
+    </div>
+   
+    <div id="verticalEdit" >
+
+
+        <div id="topPickers">
+            <div id="horizontalPlotSurvey">
+                <div >
+                    <ul class="list-inline">
+                         <li ><select id="meshakim"
+                                           style="width: 200px;"
+                                           multiple="multiple"
+                                           data-placeholder="בחר משקים...">
+
+                        </select></li>
+                        <li >
+                            <div id="reopenMap" class="AttachButton">
+                                <div class="attachContainer">
+                                    <div title="פתח מפה"
+                                         role="button"
+                                         class="innerButton">
+                                        <span>פתח מפה</span>
+                                    </div>
+                                </div>
+                            </div></li>
+                        <li >
+                            <div id="openImport" class="AttachButton">
+                                <div class="attachContainer">
+                                    <div title="פתח ייבוא נתוני מעבדה"
+                                         role="button"
+                                         class="innerButton">
+                                        <span>פתח ייבוא נתוני מעבדה</span>
+                                    </div>
+                                </div>
+                            </div></li>
+                        <li >
+                            <div id="addAttachment" class="AttachButton">
+                                <div class="attachContainer">
+                                    <div title="פתח קבצים מצורפים"
+                                         role="button"
+                                         class="innerButton">
+                                        <span>פתח קבצים מצורפים</span>
+                                    </div>
+                                </div>
+                            </div></li>
+                    </ul>
+                    <div id="plots" class="k-rtl"></div>
+                </div>
+                <div id="surveys"  class="k-rtl"></div>
+                <div id="pits"  class="k-rtl"></div>
+            </div></div>
+        <div id="fieldDetailsPane">
+            <div id="fieldData" class="k-rtl"></div>
+        </div>
+        <div id="labDetailsPane">
+            <div id="labData" class="k-rtl"></div>
+        </div>
+    </div>
+</div>
+<script>
+    $("#verticalEdit").kendoSplitter({
+        orientation: "vertical",
+        panes: [
+            { collapsible: true, size: 202, min: 202 },
+            { collapsible: true, resizable: true },
+            { collapsible: true, resizable: true }
+        ]
+    });
+    $("#horizontalPlotSurvey").kendoSplitter({
+        panes: [
+            { collapsible: true },
+            { collapsible: true },
+            { collapsible: true }
+        ]
+    });
+</script>

@@ -1,0 +1,387 @@
+﻿html {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+body {
+  width: 100%;
+  height: 100%;
+  /*margin-top:52px;*/
+  overflow: hidden;
+}
+#horizontalPlotSurvey {
+  height: 202px;
+  width: 100%;
+}
+.k-grid-clearSelection {
+  display: inline;
+}
+#coordinatesInfo {
+  color: #333;
+}
+#vertical {
+  width: 100%;
+  height: 99.7%;
+}
+#verticalEdit {
+  width: 100%;
+  height: 99.7%;
+}
+.esriPopup {
+  font-size: 15px !important;
+}
+#printButton {
+  position: absolute;
+  left: 70px;
+  z-index: 50;
+  top: 21px;
+}
+.esriPrint {
+  color: #fff;
+  width: 200px;
+  background-color: rgba(102, 102, 102, 0.8);
+}
+#map {
+  overflow: hidden;
+}
+/*.navbar-fixed-top { position: static }*/
+.navbar {
+  margin-bottom: 0;
+}
+.container-fluid {
+  margin: 0 auto;
+  height: 100%;
+  padding: 52px 0 0 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#fileDisplayArea {
+  margin-top: 2em;
+  width: 98%;
+  overflow-x: auto;
+  -ms-word-wrap: initial;
+  word-wrap: initial;
+}
+#main {
+  width: 99.7%;
+  height: 100%;
+}
+#horizontal,
+#legend,
+#top-pane {
+  width: 100%;
+  height: 100%;
+}
+#horizontalData {
+  width: 99.7%;
+  height: 84%;
+}
+#HomeButton {
+  position: absolute;
+  left: 20px;
+  z-index: 50;
+  top: 95px;
+}
+#AttachmentsButton {
+  position: absolute;
+  right: 20px;
+  z-index: 50;
+  top: 95px;
+}
+#ExportMapToFile {
+  position: absolute;
+  right: 20px;
+  z-index: 50;
+  top: 21px;
+}
+#SelectPitsTool {
+  position: absolute;
+  right: 20px;
+  z-index: 50;
+  top: 145px;
+}
+#mapSelectPlotsTool {
+  position: absolute;
+  right: 20px;
+  z-index: 50;
+  top: 195px;
+}
+#mapSelectPitsTool {
+  position: absolute;
+  right: 20px;
+  z-index: 50;
+  top: 245px;
+}
+#legendTool {
+  position: absolute;
+  right: 20px;
+  z-index: 50;
+  top: 295px;
+}
+.k-state-selected {
+  color: #000;
+}
+#mapSelectPitsTool .innerButton {
+  background-image: url(/images/pitsSelect.png);
+}
+#mapSelectPlotsTool .innerButton {
+  background-image: url(/images/plotsSelect.png);
+}
+#AttachmentsButton .innerButton {
+  background-image: url(/images/link.png);
+}
+#ExportMapToFile .innerButton {
+  background-image: url(/images/report.png);
+}
+#SelectPitsTool .innerButton {
+  background-image: url(/images/select.png);
+}
+#legendTool .innerButton {
+  background-image: url(/images/legend.png);
+}
+#addAttachment .innerButton {
+  background-image: url(/images/link.png);
+}
+.esriSignInDialog {
+  z-index: 2000!important;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+}
+.esriSignInDialog input {
+  color: black;
+  background-color: white!important;
+}
+#loadingScreen {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /*height: calc(100%-50px);*/
+  height: 100%;
+  background-image: url('../../images/zemah.gif');
+  background-repeat: no-repeat;
+  z-index: 1050;
+  background-position: center;
+  background-color: #fff;
+}
+#mapPreviewImageContainer {
+  height: auto;
+  width: 70%;
+  display: block;
+  margin: 0 15%;
+  bottom: 28px;
+  position: absolute;
+}
+#meshakim {
+  vertical-align: middle;
+}
+#reopenMap .innerButton {
+  background-image: url(/images/map.png);
+}
+#openImport .innerButton {
+  background-image: url(/images/lab-beaker-icon.png);
+}
+.AttachButton span {
+  display: none;
+}
+.body-content {
+  top: 0;
+}
+.AttachButton .innerButton {
+  padding: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: #666;
+  background-color: rgba(102, 102, 102, 0.8);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.AttachButton .innerButton:hover {
+  background-color: #7ea700;
+}
+.AttachButton .innerButton:active,
+.innerButton.active {
+  background-color: #be9b00;
+}
+.AttachButton .loading {
+  background-image: url(/images/home-spinner.gif);
+}
+.clearSelectionButton {
+  min-width: 40px;
+  min-height: 40px;
+  margin: 7px 0;
+}
+.k-grid td {
+  padding: 0.1em 0.1em;
+}
+.k-grid-header th.k-header > .k-link {
+  margin: 0 0 0 0 !important;
+  padding: 0 0 0 0 !important;
+}
+.k-rtl .k-grid-header .k-with-icon .k-link {
+  margin-left: 0.3em;
+}
+.k-widget {
+  font-size: 12px;
+  color: black;
+}
+.k-grid-header .k-header > .k-link {
+  color: black;
+}
+.attachmentSection {
+  width: 100%;
+  margin: 20px auto;
+  border: 0;
+  background: none;
+}
+#listView {
+  padding: 10px 5px;
+  margin-bottom: -1px;
+  min-height: 510px;
+}
+.attachment {
+  float: left;
+  position: relative;
+  width: 111px;
+  height: 170px;
+  margin: 0 5px;
+  padding: 0;
+}
+.attachment img {
+  width: 110px;
+  height: 110px;
+}
+.attachment h3 {
+  margin: 0;
+  padding: 3px 5px 0 0;
+  max-width: 96px;
+  overflow: hidden;
+  line-height: 1.1em;
+  font-size: .9em;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #999;
+}
+.attachment p {
+  visibility: hidden;
+}
+.attachment:hover p {
+  visibility: visible;
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  line-height: 110px;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: background .2s linear, color .2s linear;
+  -moz-transition: background .2s linear, color .2s linear;
+  -webkit-transition: background .2s linear, color .2s linear;
+  -o-transition: background .2s linear, color .2s linear;
+}
+.k-listview:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.depthButton {
+  background-color: #7ea700;
+}
+.depthButton:active,
+.depthButton.active,
+.depthButton:active {
+  background-color: #be9b00;
+}
+.attach-view {
+  display: inline-flex;
+}
+#hider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*
+        z- index must be lower than pop up box
+       */
+  z-index: 99;
+  background-color: #7ea700;
+  opacity: 0.3;
+}
+.loader {
+  font-size: 10px;
+  margin: 23% auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: #FFF;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #7ea700;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
