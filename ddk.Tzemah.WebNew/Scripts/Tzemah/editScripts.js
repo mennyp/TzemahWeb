@@ -1309,12 +1309,16 @@ function LabDataImportProcessManager(props, layerDefPro) {
         var fileDisplayAreaElement = $("#" + props.fileDisplayArea),
             d = this.files[0],
             e = /text.*/;
-        if (d.type.match(e)) {
+        //if (d.type.match(e)) {
+        //    var fileReader = new FileReader;
+        //    fileReader.onload = function (a) {
+        //        fileDisplayAreaElement.text(fileReader.result)
+        //    }, fileReader.readAsText(d, "CP1255")
+        //} else fileDisplayAreaElement.innerText = "File not supported!"
             var fileReader = new FileReader;
             fileReader.onload = function (a) {
                 fileDisplayAreaElement.text(fileReader.result)
             }, fileReader.readAsText(d, "CP1255")
-        } else fileDisplayAreaElement.innerText = "File not supported!"
     }
     var g,
         h = $("#" + props.importWindow).kendoWindow({
