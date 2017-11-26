@@ -7,7 +7,7 @@ namespace Geoview.Tzemah.Common
     {
         public MagikDataLine(string line)
         {
-            this.Cells = line.Split('\t');
+            this.Cells = line.Split(',');
         }
 
         public readonly string[] Cells;
