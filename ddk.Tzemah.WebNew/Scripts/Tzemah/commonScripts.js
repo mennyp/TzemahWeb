@@ -525,7 +525,7 @@ function LabDataPicker(props, layerDefPro, pitsPick, depthSel, mapDataSplit) {
                         f: "json",
                         token: window.token,
                         outFields: "*",
-                        where: "pitId=" + a.join(" OR pitId =")
+                        where: "PitId=" + a.join(" OR PitId =")
                     },
                     type: "POST"
                 }
@@ -541,8 +541,11 @@ function LabDataPicker(props, layerDefPro, pitsPick, depthSel, mapDataSplit) {
                 var fieldsArr = [],
                     c = a.features;
                 return fieldsArr = _.map(c, function (a) {
-                    var b = a.attributes;
-                    return b.RecievalDate = new Date(b.RecievalDate), b
+                    var att = a.attributes;
+                    att.RecievalDate = new Date(att.RecievalDate);
+                    att.DigumDate = new Date(att.DigumDate);
+                    att.FinishedDate = new Date(att.FinishedDate);
+                    return att;
                 })
             },
             model: {

@@ -27,5 +27,16 @@ namespace Geoview.Tzemah.Common
 
             throw new ApplicationException("Unrecognized pitNumberInSurvey: '" + pitNumberInSurvey + "'");
         }
+
+        public int getPitIdVal(string pitNumberInSurvey)
+        {
+            string trimmedPitNumberInSurvey = pitNumberInSurvey.Trim();
+            if (m_PitIds.ContainsKey(trimmedPitNumberInSurvey))
+            {
+                return m_PitIds[trimmedPitNumberInSurvey];
+            }
+
+            throw new ApplicationException("Unrecognized pitNumberInSurvey: '" + pitNumberInSurvey + "'");
+        }
     }
 }

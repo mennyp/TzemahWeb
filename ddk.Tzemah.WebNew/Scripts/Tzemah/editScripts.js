@@ -799,7 +799,7 @@ function DataTableEditor(layerUrl, b, c) {
                         f: "json",
                         token: window.token,
                         outFields: "*",
-                        where: "pitId=" + c.join(" OR pitId =")
+                        where: "PitId=" + c.join(" OR PitId =")
                     },
                     type: "POST"
                 },
@@ -847,7 +847,15 @@ function DataTableEditor(layerUrl, b, c) {
         $(a).on("pitsDisplayed pitsSelectedEvent", function (a, f) {
             if (console.debug("fieldData sees unique pits : " + f.length + " | " + f.join(",")), "undefined" != typeof b) {
                 var g;
-                d ? (g = d.data("kendoGrid").dataSource, g.transport.options.read.data.where = "pitId=" + f.join(" OR pitId ="), g.read()) : (g = c.dataSourceWithPits(f), d = c.tableCreate(b, FieldDataHighlighter, e))
+                if (d) {
+                    g = d.data("kendoGrid").dataSource;
+                    g.transport.options.read.data.where = "PitId=" + f.join(" OR PitId =");
+                    g.read();
+                }
+                else {
+                    g = c.dataSourceWithPits(f);
+                    d = c.tableCreate(b, FieldDataHighlighter, e);
+                }
             }
         })
     }
@@ -1014,7 +1022,10 @@ function LabDataEditor(props, layerDefPro, kenSplitter, labDataImport) {
                 }
                 return _.map(features, function (a) {
                     var att = a.attributes;
-                    return att.RecievalDate = new Date(att.RecievalDate), att
+                    att.RecievalDate = new Date(att.RecievalDate);
+                    att.DigumDate = new Date(att.DigumDate);
+                    att.FinishedDate = new Date(att.FinishedDate);
+                    return att;
                 })
             },
             model: {
@@ -1159,8 +1170,11 @@ function LabDataImport(props, layerDefPro) {
             parse: function (a) {
                 var features = a.features;
                 return "string" == typeof a ? (kenGrid.data("kendoGrid").dataSource.read(), []) : _.map(features, function (feature) {
-                    var att = feature.attributes;
-                    return att.RecievalDate = new Date(att.RecievalDate), att
+                    var att = a.attributes;
+                    att.RecievalDate = new Date(att.RecievalDate);
+                    att.DigumDate = new Date(att.DigumDate);
+                    att.FinishedDate = new Date(att.FinishedDate);
+                    return att;
                 })
             },
             model: {
@@ -1251,10 +1265,15 @@ function LabDataImportProcessManager(props, layerDefPro) {
         _.each(b.result, function (a) {
             _.each(a.Properties, function (b, c) {
                 a[c] = b
-            }), delete a.Properties, _.each(g.columns(), function (b) {
+            });
+            delete a.Properties;
+            _.each(g.columns(), function (b) {
                 a.hasOwnProperty(b.field) || (a[b.field] = "")
-            }), a.RecievalDate = new Date(moment(a.RecievalDate, "DD/M/YYYY").format()), c.push(a)
-        }), $(props.table).data("kendoGrid").dataSource.data(c)
+            });
+            //a.RecievalDate = new Date(moment(a.RecievalDate, "DD/M/YYYY").format());
+            c.push(a)
+        });
+        $(props.table).data("kendoGrid").dataSource.data(c)
     }
 
     function d(serveyVal) {

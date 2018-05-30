@@ -1,7 +1,6 @@
 ﻿function LayerDefProvider() {
     "use strict";
     //var _agolBaseUrl = "http://services5.arcgis.com/5S0ohqvmPCVhAd0m";
-
     var _agolBaseUrl = "http://services6.arcgis.com/MvtoRtbPLfOd9STi";
     var layers = [
         {
@@ -32,22 +31,22 @@
                         fieldName: "Area",
                         label: "שטח",
                         visible: true,
-                        format:{places:1}
+                        format: { places: 1 }
 
 
                     }
-                ]  
+                ]
             }
         },
-        { id: "symbology", url: _agolBaseUrl + "/arcgis/rest/services/soilSystem/FeatureServer/0" },
+        { id: "symbology", url: _agolBaseUrl + "/arcgis/rest/services/soilsystem_05_2018_noRelation/FeatureServer/0" },
         {
-            id: "pits", drawable: true, url: _agolBaseUrl + "/arcgis/rest/services/soilSystem/FeatureServer/1",
+            id: "pits", drawable: true, url: _agolBaseUrl + "/arcgis/rest/services/soilsystem_05_2018_noRelation/FeatureServer/1",
             popUpParams: {
                 title: 'מספר בור  {OBJECTID}',
                 fieldInfos: [
                     {
                         fieldName: 'SurveyId',
-                        label:"מספר סקר",
+                        label: "מספר סקר",
                         visible: false
                     }, {
                         fieldName: 'OBJECTID',
@@ -65,13 +64,13 @@
                 ]
             }
         },
-        { id: "fieldData", url: _agolBaseUrl + "/arcgis/rest/services/soilSystem/FeatureServer/3" },
-        { id: "fieldDataTableColors", url: _agolBaseUrl + "/arcgis/rest/services/soilSystem/FeatureServer/4" },
+        { id: "fieldData", url: _agolBaseUrl + "/arcgis/rest/services/soilsystem_05_2018_noRelation/FeatureServer/10" },
+        { id: "fieldDataTableColors", url: _agolBaseUrl + "/arcgis/rest/services/soilsystem_05_2018_noRelation/FeatureServer/8" },
         { id: "labData", url: _agolBaseUrl + "/arcgis/rest/services/soilsystem_05_2018_noRelation/FeatureServer/6" },
-        { id: "labDataRanges", url:_agolBaseUrl + "/arcgis/rest/services/soilSystem/FeatureServer/6" },
-        { id: "meshakim", url:_agolBaseUrl + "/arcgis/rest/services/soilSystem/FeatureServer/8" },
-        { id: "surveys", drawable: false, url:_agolBaseUrl + "/ArcGIS/rest/services/soilSystem/FeatureServer/11" },
-        { id: "surveyAttachments", drawable: false, url:_agolBaseUrl + "/ArcGIS/rest/services/soilSystem/FeatureServer/9" },
+        { id: "labDataRanges", url: _agolBaseUrl + "/arcgis/rest/services/soilsystem_05_2018_noRelation/FeatureServer/5" },
+        { id: "meshakim", url: _agolBaseUrl + "/arcgis/rest/services/soilsystem_05_2018_noRelation/FeatureServer/3" },
+        { id: "surveys", drawable: false, url: _agolBaseUrl + "/ArcGIS/rest/services/soilsystem_05_2018_noRelation/FeatureServer/9" },
+        { id: "surveyAttachments", drawable: false, url: _agolBaseUrl + "/ArcGIS/rest/services/soilsystem_05_2018_noRelation/FeatureServer/12" },
         { id: "geoService", drawable: false, url: "http://tasks.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer" },
         { id: "printService", drawable: false, url: "https://sampleserver6.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task" }
     ];

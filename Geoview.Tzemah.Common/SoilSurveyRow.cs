@@ -41,6 +41,8 @@ namespace Geoview.Tzemah.Common
             HebrewEnglishFieldsDictionary["גידול"] = new StringField<string>("Gidul");
             HebrewEnglishFieldsDictionary["זן"] = new StringField<string>("Variety");
             HebrewEnglishFieldsDictionary["הערת מדגם"] = new StringField<string>("SampleRemark");
+
+
             
         }
 
@@ -74,11 +76,11 @@ namespace Geoview.Tzemah.Common
                 string cellValue = cells[i];
 
                 // pits:
-                if (columnName == "בור")
-                {
-                    m_Pits.SetValue(m_Values, cellValue);
-                    continue;
-                }
+                //if (columnName == "בור")
+                //{
+                //    m_Pits.SetValue(m_Values, cellValue);
+                //    continue;
+                //}
 
                 //2test: if unrecognized field name should throw exception?
                 if (HebrewEnglishFieldsDictionary.ContainsKey(columnName))

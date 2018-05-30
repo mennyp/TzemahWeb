@@ -35,15 +35,17 @@ namespace Geoview.Tzemah.Common
             List<LabDataModel> result = new List<LabDataModel>();
             foreach (string bodyLine in file.BodyPart)
             {
+                if (string.IsNullOrEmpty(bodyLine))
+                    continue;
                 try
                 {
                     MagikDataLine line = new MagikDataLine(bodyLine);
 
-                    SoilSurveyRow soilSurveyRow = new SoilSurveyRow(surveyId, pits, line, header);
+                    //SoilSurveyRow soilSurveyRow = new SoilSurveyRow(surveyId, pits, line, header);
 
                     SoilSurveyMaterialsTable soilSurveyMaterials = new SoilSurveyMaterialsTable(header, line,
                         m_MagikToRowsDictionary);
-                    LabDataModel labRow = new LabDataModel(soilSurveyRow, soilSurveyMaterials);
+                    LabDataModel labRow = new LabDataModel(pits, soilSurveyMaterials, surveyId);
                     result.Add(labRow);
                 }
                 catch (Exception e)
